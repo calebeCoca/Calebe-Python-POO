@@ -1,0 +1,33 @@
+class Pedido:
+    #não define os atributos
+    status="Recebido"
+ 
+    #Método construtor  - instancia recebe os valor do objeto
+    def __init__(self, num, data, hora, cliente, itens, pag):
+        #self é chamar atributos;
+        self.num=num#private - não ser acessado nem alterado por outra classses
+        self.data=data#publico - pode ser acessado e alterado por outras classes
+        self.hora=hora
+        self.cliente=cliente
+        self.__itens=itens
+        self.pagamento=pag
+ 
+        #método - ação
+    def atualizar_pedido(self, novoStatus):
+            self.status=novoStatus
+ 
+    def imprimir(self):
+        print(f"\n------------------- Pedido N° {self.num} --------------------"
+                f"\nData: {self.data} - Horário: {self.hora} "
+                f"\nCliente: {self.cliente}")
+ 
+        #encapsulamento
+    def setnum(self, numero): #setado-alterado indiretamente pois num é privado
+             self.__num=numero
+ 
+    def getnum(self): #acessar a informação de variavel private
+        return self.num
+ 
+    def setitem(self, item): #controla as informações
+             self.__itens.append(item)
+ 
