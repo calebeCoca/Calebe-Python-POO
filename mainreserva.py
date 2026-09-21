@@ -1,4 +1,5 @@
 from pedidoreserva import Pedido
+from cliente import Cliente
  
 #criar um objeto - representar um elemento - dar valores
 novoPedido = Pedido(1, "14/09/2026", "21:10", "Rafael",
@@ -27,4 +28,6 @@ print(novoPedido.getnum())
  
 novoPedido.setitem("X-Calabresa")
 novoPedido.imprimir()
- 
+
+
+novoCliente = Cliente(endereco="Rua dahora 157",nome="Garoto periculoso", telefone="987654321") 
