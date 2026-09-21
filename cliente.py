@@ -19,16 +19,3 @@ class Cliente:
         print(f"|---Nome: {self.nome}---|")
         print(f"|--Telefone: {self.telefone}--|")
         print(f"|--Endereço: {self.endereco}--|")
- 
-        # Criar um objeto
- 
-        novoCliente = Cliente("João", "1234-8765", "Rua Legalzinha")
- 
-        # Acessar atributos
- 
-        print(novoCliente.nome)
- 
-        # Chamar método
- 
-        novoCliente.imprimir()
- 

@@ -30,4 +30,5 @@ novoPedido.setitem("X-Calabresa")
 novoPedido.imprimir()
 
 
-novoCliente = Cliente(endereco="Rua dahora 157",nome="Garoto periculoso", telefone="987654321") 
+novoCliente = Cliente(endereco="Rua dahora 157",nome="Garoto bacanudo", telefone="987654321") 
+novoCliente.imprimirficha()
