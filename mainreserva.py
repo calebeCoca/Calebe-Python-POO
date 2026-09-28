@@ -1,5 +1,7 @@
 from pedidoreserva import Pedido
 from cliente import Cliente
+from Produto import Produto
+ 
  
 #criar um objeto - representar um elemento - dar valores
 novoPedido = Pedido(1, "14/09/2026", "21:10", "Rafael",
@@ -32,3 +34,11 @@ novoPedido.imprimir()
 
 novoCliente = Cliente(endereco="Rua dahora 157",nome="Garoto bacanudo", telefone="987654321") 
 novoCliente.imprimirficha()
+
+novoPedido = Pedido(1, "14/09/26", "21:20", novoCliente, 
+                    ["X-salada", "X-bacon"], "pix ")
+novoPedido.imprimir()
+
+#criar produto
+xbacon = Produto(cod="P01", desc="X-bacon", categoria="Lanche", preco=19.90)
+xbacon.imprimirproduto()
