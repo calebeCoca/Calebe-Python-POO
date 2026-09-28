@@ -8,4 +8,4 @@ class ItemPedido:
     def imprimir(self):
         print:(f"\n|Itens: {self.Item}|"
                 f"\n|Produtos do Pedido: {self.produto}")
- ,
+ 
