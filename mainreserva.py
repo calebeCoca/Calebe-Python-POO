@@ -1,44 +1,30 @@
-from pedidoreserva import Pedido
+import os
 from cliente import Cliente
 from Produto import Produto
+from itempedido import ItemPedido
+from pedidoreserva import Pedido
  
+os.system("cls")
  
-#criar um objeto - representar um elemento - dar valores
-novoPedido = Pedido(1, "14/09/2026", "21:10", "Rafael",
-                    ["X-Salada", "X-Bacon"], "Pix")
+#Cadastrar Cliente
+novoCli = Cliente(nome="Neyma Junio",
+                 endereco="Rua boa, nº00", telefone="67 (+55) 7265-1233")
  
-##### Oque eu posso fazer com o objeto #####
-#acessar um atributo
-print(novoPedido.num)
-print(novoPedido.status)
-#alterar os dados de um atributo
-novoPedido.cliente="Rafael Martins"
-print(novoPedido.cliente)
+#Cadastrar Produto
+siri = Produto(cod=1,desc="Hámburger de Siri", categoria="Lanche",
+               preco=20.55)
+refri = Produto(cod=2, desc="Tubaina", categoria="Bebidas",
+                preco=5.6)
  
-#chamando os metodos
-novoPedido.imprimir()
-novoPedido.atualizar_pedido("Em preparação")
+novoCli.imprimir()
+siri.imprimir
+refri.imprimir()
  
-#acessar o id - private
-#novoPedido.__Num=2
-#print(novoPedido.__num) #acessar
-#novoPedido.imprimir()
+#Pedido
+item1 = ItemPedido(produto=siri, obs="Cebola extra", qtd=2, desconto=2)
+item2 = ItemPedido(produto=refri, obs="", qtd=2, desconto=0)
  
-print(novoPedido.getnum())
-novoPedido.setnum(2)
-print(novoPedido.getnum())
+itens = [item1, item2]
  
-novoPedido.setitem("X-Calabresa")
-novoPedido.imprimir()
-
-
-novoCliente = Cliente(endereco="Rua dahora 157",nome="Garoto bacanudo", telefone="987654321") 
-novoCliente.imprimirficha()
-
-novoPedido = Pedido(1, "14/09/26", "21:20", novoCliente, 
-                    ["X-salada", "X-bacon"], "pix ")
-novoPedido.imprimir()
-
-#criar produto
-xbacon = Produto(cod="P01", desc="X-bacon", categoria="Lanche", preco=19.90)
-xbacon.imprimirproduto()
+pedido = Pedido (cliente=novoCli, data="14.02.2030", hora="19:40", itemPedido=itens, num="67 (+55) 7265-1233", pagamento="Cartão")
+pedido.imprimir()

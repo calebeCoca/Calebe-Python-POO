@@ -9,13 +9,8 @@ class Cliente:
  
         # Métodos - ações
  
-    def gettelefone(self):
-        return self.__telefone
-    
-    def settelefone(self, telefone):
-        self.__telefone=telefone
-    
-    def imprimirficha(self):
-        print(f"|---Nome: {self.nome}---|")
-        print(f"|--Telefone: {self.telefone}--|")
-        print(f"|--Endereço: {self.endereco}--|")
+    def imprimir(self):
+        print(f"Nome: {self.nome}")
+        print(f"Telefone: {self.telefone}")
+        print(f"Endereço: {self.endereco}")
+ 
