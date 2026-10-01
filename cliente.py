@@ -10,7 +10,9 @@ class Cliente:
         # Métodos - ações
  
     def imprimir(self):
-        print(f"Nome: {self.nome}")
-        print(f"Telefone: {self.telefone}")
-        print(f"Endereço: {self.endereco}")
+        print(f"| ----------------------------- |")
+        print(f"|- 🔤 Nome: {self.nome} -|")
+        print(f"|- 📞 Telefone: {self.telefone} -|")
+        print(f"|- 🏠 Endereço: {self.endereco} -|"
+              "\n| ----------------------------- |")
  
